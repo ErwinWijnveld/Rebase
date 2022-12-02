@@ -1,5 +1,8 @@
 import localFont from '@next/font/local';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import '../assets/styles/globals.scss';
 
 const hackregular = localFont({
@@ -33,6 +36,11 @@ const antiqueOlive = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+	useEffect(() => {
+		AOS.init({
+			anchorPlacement: 'top-bottom',
+		});
+	}, []);
 	return (
 		<div className={hackregular.variable + ' ' + antiqueOlive.variable}>
 			<Component {...pageProps} />

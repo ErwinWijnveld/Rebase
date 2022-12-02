@@ -66,8 +66,8 @@ const JellyBlob = () => {
 		set.y(pos.y);
 		set.width(300 + scale);
 		set.r(rotation);
-		set.sx(1 + scale / 3);
-		set.sy(1 - scale / 3);
+		set.sx(1 + scale / 3.5);
+		set.sy(1 - scale / 3.5);
 		set.rt(-rotation);
 	}, []);
 

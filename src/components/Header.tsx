@@ -14,19 +14,14 @@ export type HeaderProps = {
 
 const Header = ({ logo, cta }: HeaderProps) => {
 	return (
-		<header className="absolute top-0 inset-x-0 w-full container flex justify-between items-center py-14">
+		<header className="absolute top-0 inset-x-0 w-full container flex justify-between items-center py-8 md:py-14">
 			{/* logo */}
 			<Link
 				href="/"
-				className="hover:scale-110 transition-all duration-500 relative  h-[46px] w-[46px] md:h-[86px] md:w-[86px]"
+				className="hover:scale-110 transition-all duration-500 relative  h-[52px] w-[52px] md:h-[86px] md:w-[86px]"
 			>
 				{logo && (
-					<Image
-						src={logo.src}
-						alt={logo.alt}
-						priority
-						layout="fill"
-					/>
+					<Image src={logo.src} alt={'logo'} priority layout="fill" />
 				)}
 			</Link>
 

@@ -17,6 +17,7 @@ const globalStyles = ({ addBase, config }) => {
     },
     h1: {
       fontSize: config('theme.fontSize.head3'),
+      lineHeight: config('theme.lineHeight.head'),
       [`@media (min-width: ${config('theme.screens.md')})`]: {
         fontSize: config('theme.fontSize.head2'),
       },
@@ -24,7 +25,15 @@ const globalStyles = ({ addBase, config }) => {
         fontSize: config('theme.fontSize.head1'),
       },
     },
-    h2: { fontSize: config('theme.fontSize.head2') },
+    h2: {
+      fontSize: config('theme.fontSize.head4'),
+      [`@media (min-width: ${config('theme.screens.md')})`]: {
+        fontSize: config('theme.fontSize.head3'),
+      },
+      [`@media (min-width: ${config('theme.screens.lg')})`]: {
+        fontSize: config('theme.fontSize.head2'),
+      },
+    },
     'ol, ul': { paddingLeft: config('theme.padding.4') },
     ol: { listStyleType: 'decimal' },
     ul: { listStyleType: 'disc' },
@@ -51,6 +60,7 @@ module.exports = {
       colors: {
         yellow: '#FBD38D',
         dark: '#161A22',
+        highlight: '#202329',
       },
       fontSize: {
         head1: '65px',
@@ -59,6 +69,9 @@ module.exports = {
         head4: '27px',
         par: '20px',
       },
+      lineHeight: {
+        head: '1.15',
+      }
     },
   },
   plugins: [globalStyles],

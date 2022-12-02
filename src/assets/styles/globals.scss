@@ -7,7 +7,7 @@ body {
     @apply text-white;
 }
 
-h1, h2, h3, h4, h5, svg {
+h1, h2, h3, h4, h5 {
     font-family: var(--antiqueOlive);
     font-weight: 900;
 
@@ -25,6 +25,12 @@ p, * {
         font-family: var(--hackRegular);
         font-size: inherit;
     }
+}
+
+.label {
+    font-size: 16px;
+    font-family: var(--antiqueOlive);
+    font-weight: 900;
 }
 
 // follow blur
@@ -58,3 +64,16 @@ p, * {
     text-align: center;
     font-weight: 600;
   }
+
+/**
+** Animations
+**/
+
+[data-aos="op-in"] {
+    transition-property: opacity;
+    opacity: 0;
+  
+    &.aos-animate {
+        opacity: 1;
+    }
+}

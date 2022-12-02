@@ -1,9 +1,9 @@
 import { Expo, gsap } from 'gsap';
-import { useCallback, useLayoutEffect, useRef } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef } from 'react';
 
 // Gsap Ticker Function
 function useTicker(callback: any, paused: any) {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!paused && callback) {
 			gsap.ticker.add(callback);
 		}
@@ -45,7 +45,7 @@ const JellyBlob = () => {
 	const set = useInstance() as any;
 
 	// Set GSAP quick setter Values on useLayoutEffect Update
-	useLayoutEffect(() => {
+	useEffect(() => {
 		set.x = gsap.quickSetter(jellyRef.current, 'x', 'px');
 		set.y = gsap.quickSetter(jellyRef.current, 'y', 'px');
 		set.r = gsap.quickSetter(jellyRef.current, 'rotate', 'deg');
@@ -64,15 +64,15 @@ const JellyBlob = () => {
 		// Set GSAP quick setter Values on Loop Function
 		set.x(pos.x);
 		set.y(pos.y);
-		set.width(300 + scale * 150);
+		set.width(300 + scale);
 		set.r(rotation);
-		set.sx(1 + scale / 3);
-		set.sy(1 - scale / 3);
+		set.sx(1 + scale / 20);
+		set.sy(1 - scale / 20);
 		set.rt(-rotation);
 	}, []);
 
 	// Run on Mouse Move
-	useLayoutEffect(() => {
+	useEffect(() => {
 		// Caluclate Everything Function
 		const setFromEvent = (e: any) => {
 			// Mouse X and Y
@@ -83,7 +83,7 @@ const JellyBlob = () => {
 			gsap.to(pos, {
 				x: x,
 				y: y,
-				duration: 7,
+				duration: 9,
 				ease: Expo.easeOut,
 				onUpdate: () => {
 					vel.x = x - pos.x;

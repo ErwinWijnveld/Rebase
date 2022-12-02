@@ -5,14 +5,25 @@ const globalStyles = ({ addBase, config }) => {
     p: {
       marginBottom: config('theme.margin.4'),
       lineHeight: config('theme.lineHeight.normal'),
-      fontSize: config('theme.fontSize.par'),
+      fontSize: config('theme.fontSize.base'),
+      [`@media (min-width: ${config('theme.screens.md')})`]: {
+        fontSize: config('theme.fontSize.par'),
+      },
     },
     'h1, h2, h3, h4, h5': {
       marginBottom: config('theme.margin.2'),
       lineHeight: config('theme.lineHeight.tight'),
       fontWeight: config('theme.fontWeight.bold'),
     },
-    h1: { fontSize: config('theme.fontSize.head1') },
+    h1: {
+      fontSize: config('theme.fontSize.head3'),
+      [`@media (min-width: ${config('theme.screens.md')})`]: {
+        fontSize: config('theme.fontSize.head2'),
+      },
+      [`@media (min-width: ${config('theme.screens.lg')})`]: {
+        fontSize: config('theme.fontSize.head1'),
+      },
+    },
     h2: { fontSize: config('theme.fontSize.head2') },
     'ol, ul': { paddingLeft: config('theme.padding.4') },
     ol: { listStyleType: 'decimal' },
@@ -44,6 +55,8 @@ module.exports = {
       fontSize: {
         head1: '65px',
         head2: '45px',
+        head3: '32px',
+        head4: '27px',
         par: '20px',
       },
     },

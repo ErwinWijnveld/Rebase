@@ -66,8 +66,8 @@ const JellyBlob = () => {
 		set.y(pos.y);
 		set.width(300 + scale);
 		set.r(rotation);
-		set.sx(1 + scale / 20);
-		set.sy(1 - scale / 20);
+		set.sx(1 + scale / 3);
+		set.sy(1 - scale / 3);
 		set.rt(-rotation);
 	}, []);
 
@@ -83,7 +83,7 @@ const JellyBlob = () => {
 			gsap.to(pos, {
 				x: x,
 				y: y,
-				duration: 9,
+				duration: 6,
 				ease: Expo.easeOut,
 				onUpdate: () => {
 					vel.x = x - pos.x;

@@ -18,15 +18,14 @@ const Header = ({ logo, cta }: HeaderProps) => {
 			{/* logo */}
 			<Link
 				href="/"
-				className="hover:scale-110 transition-all duration-500"
+				className="hover:scale-110 transition-all duration-500 relative  h-[46px] w-[46px] md:h-[86px] md:w-[86px]"
 			>
 				{logo && (
 					<Image
 						src={logo.src}
 						alt={logo.alt}
-						width={86}
-						height={86}
 						priority
+						layout="fill"
 					/>
 				)}
 			</Link>
@@ -34,7 +33,7 @@ const Header = ({ logo, cta }: HeaderProps) => {
 			{/* cta */}
 			{cta && (
 				<Link
-					className="text-[18px] border border-yellow px-8 py-[10px] rounded-full hover:bg-yellow hover:text-black transition-all duration-300"
+					className=" text-[10px] md:text-[18px] border border-yellow px-6 md:px-8 py-[8px] md:py-[10px] rounded-full hover:bg-yellow hover:text-black transition-all duration-300"
 					href={cta.href}
 				>
 					{cta.text}

@@ -2,7 +2,7 @@
   <g id="Group_1" data-name="Group 1" transform="translate(-139 -76.223)">
     <g id="Group_2" data-name="Group 2">
       <rect id="Rectangle_2" data-name="Rectangle 2" width="86.554" height="86.554" rx="6" transform="translate(139 76.223)" fill="#fbd38d"/>
-      <text id="R" transform="translate(157.403 93.76)" fill="#161a22" font-size="60" font-family="AntiqueOliveStd-Compact, Antique Olive Std"><tspan x="0" y="46">R</tspan></text>
+      <path id="Path_64" data-name="Path 64" d="M20.16,14.38h6c3.66,0,4.98,1.32,4.98,4.08,0,4.2-2.58,4.8-5.82,4.8H20.16ZM3.66,46h16.5V31h.18l9.84,15H49.26L35.52,27.82c8.28-.18,12.12-4.2,12.12-12.3,0-10.56-7.02-12.36-15.42-12.36H3.66Z" transform="translate(157.403 93.76)" fill="#161a22"/>
     </g>
   </g>
 </svg>
